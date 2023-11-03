@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Camioneta extends Vehiculo implements ICombustion{
     private int capacidadTanque;
     private int consumoCombustible;
@@ -27,7 +29,8 @@ public class Camioneta extends Vehiculo implements ICombustion{
 
     @Override
     public int antiguedadVehiculo() {
-        return 2023- super.getAnio();
+        Calendar cal = Calendar.getInstance();
+        return (cal.get(Calendar.YEAR) - this.getAnio());
     }
 
     @Override

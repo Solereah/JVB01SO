@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Auto extends Vehiculo implements IElectrico{
 
     private int capacidadBateria;
@@ -28,8 +30,11 @@ public class Auto extends Vehiculo implements IElectrico{
 
     @Override
     public int antiguedadVehiculo() {
-        return 2023 - super.getAnio();
+        Calendar cal = Calendar.getInstance();
+        return (cal.get(Calendar.YEAR) - this.getAnio());
     }
+
+
 
     @Override
     public void cargarEnergia() {

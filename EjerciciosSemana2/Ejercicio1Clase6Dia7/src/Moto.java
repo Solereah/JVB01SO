@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Moto extends Vehiculo implements ICombustion{
 
     private double  cilindrada;
@@ -29,7 +31,8 @@ public class Moto extends Vehiculo implements ICombustion{
 
     @Override
     public int antiguedadVehiculo() {
-        return 2023- super.getAnio();
+        Calendar cal = Calendar.getInstance();
+        return (cal.get(Calendar.YEAR) - this.getAnio());
     }
 
     @Override

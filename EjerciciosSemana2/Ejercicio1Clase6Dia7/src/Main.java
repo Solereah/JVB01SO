@@ -27,29 +27,27 @@ public class Main {
         vehiculos.add(moto2);
         vehiculos.add(moto3);
 
-
+        //Muestro la forma de recarga con un for pero haciendo un casting.
         for (Vehiculo vehiculo: vehiculos) {
+
             if (vehiculo instanceof Auto) {
+
+                System.out.println("\n *********** AUTOMOVIL ************: \n" + vehiculo.toString() + "\n" + "Antiguedad => " + vehiculo.antiguedadVehiculo() + " años");
                 ((Auto) vehiculo).cargarEnergia();
-            }else if(vehiculo instanceof Camioneta) {
-                ((Camioneta) vehiculo).cargarCombustible();
-            }else if(vehiculo instanceof Moto){
+
+            } else if (vehiculo instanceof Moto) {
+
+                System.out.println("\n *********** MOTOCICLETA ************: \n" + vehiculo.toString() + "\n" + "Antiguedad =>: " + vehiculo.antiguedadVehiculo() + " años");
                 ((Moto) vehiculo).cargarCombustible();
+
+            } else if (vehiculo instanceof Camioneta) {
+
+                System.out.println("\n *********** CAMIONETA ************: \n" + vehiculo.toString() + "\n" + "Antiguedad =>: " + vehiculo.antiguedadVehiculo() + " años");
+                ((Camioneta) vehiculo).cargarCombustible();
             }
         }
 
-        //Llamo a los métodos de las interfaces
-        System.out.println("----------Forma de recarga de los vehículos----------");
-        auto1.cargarEnergia();
-        auto2.cargarEnergia();
-        auto3.cargarEnergia();
-        camioneta1.cargarCombustible();
-        camioneta2.cargarCombustible();
-        moto1.cargarCombustible();
-        moto2.cargarCombustible();
-        moto3.cargarCombustible();
 
-        //Muestro la forma de recarga con un for pero haciendo un casting.
         System.out.println("----------Información de los vehículos----------");
         for (Vehiculo vehiculo: vehiculos) {
             System.out.println(vehiculo.toString());
