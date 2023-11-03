@@ -26,12 +26,16 @@ public class Main {
         vehiculos.add(moto1);
         vehiculos.add(moto2);
         vehiculos.add(moto3);
-        for (Vehiculo vehiculo: vehiculos) {
-            if(vehiculo.getClass().isInstance(Auto)){
-                (Auto)vehiculo.
-            }
-            System.out.println();
 
+
+        for (Vehiculo vehiculo: vehiculos) {
+            if (vehiculo instanceof Auto) {
+                ((Auto) vehiculo).cargarEnergia();
+            }else if(vehiculo instanceof Camioneta) {
+                ((Camioneta) vehiculo).cargarCombustible();
+            }else if(vehiculo instanceof Moto){
+                ((Moto) vehiculo).cargarCombustible();
+            }
         }
 
         //Llamo a los métodos de las interfaces
@@ -45,7 +49,7 @@ public class Main {
         moto2.cargarCombustible();
         moto3.cargarCombustible();
 
-
+        //Muestro la forma de recarga con un for pero haciendo un casting.
         System.out.println("----------Información de los vehículos----------");
         for (Vehiculo vehiculo: vehiculos) {
             System.out.println(vehiculo.toString());
