@@ -1,5 +1,6 @@
 ***************************************************************
 ##PROYECTO REALIZADO POR:
-- Osacar Cuenca
-- Sol Lereah
-- Alicia Martínez Maqueda
+
+-**Oscar Cuenca**
+-**Sol Lereah**
+-**Alicia Martínez Maqueda**
