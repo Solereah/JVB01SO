@@ -8,7 +8,7 @@ public class CallCenter  {
     public CallCenter(int cantAgentes, int cantLlamadas) {
         this.cantAgentes = cantAgentes;
         this.cantLlamadas = cantLlamadas;
-    }
+    } 
 
     public int getCantAgentes() {
         return cantAgentes;

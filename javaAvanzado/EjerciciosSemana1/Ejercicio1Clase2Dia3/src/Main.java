@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        CallCenter Abm = new CallCenter(5,20);
+        CallCenter Abm = new CallCenter(5,9);
         Thread agente1 = new Thread(new Agente("Luis Alfonso", Abm));
         Thread agente2 = new Thread(new Agente("María Alem", Abm));
         Thread agente3 = new Thread(new Agente("Juan perez", Abm));
