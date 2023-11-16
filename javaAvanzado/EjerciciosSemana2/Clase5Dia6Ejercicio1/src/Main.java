@@ -1,6 +1,4 @@
 import logica.Empleado;
-
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -13,10 +11,6 @@ public class Main {
         /*Crea una aplicación que maneje información sobre empleados. Cada empleado tiene un nombre, un salario y
         una categoría (por ejemplo, "Desarrollador", "Analista", "Gerente"). Implementa las siguientes
         operaciones utilizando Streams y Optionals:
-
-
-
-
         */
 
         List<Empleado> empleados = new ArrayList<>();
@@ -62,7 +56,7 @@ public class Main {
 
         //Encuentra al empleado con el salario más alto utilizando Optionals.
 
-      Optional <Empleado> empleByHigherSal = empleados.stream()
+        Optional <Empleado> empleByHigherSal = empleados.stream()
               .max(Comparator.comparingDouble(Empleado::getSalario));
 
         System.out.println( empleByHigherSal);
