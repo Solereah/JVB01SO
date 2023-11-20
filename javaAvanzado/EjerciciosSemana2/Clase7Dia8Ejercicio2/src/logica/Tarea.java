@@ -2,39 +2,27 @@ package logica;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class Tarea {
-
 	private String nombre;
-	private final List<Tarea>subtareas;
+	private List<Tarea> subtareas;
 
 	public Tarea(String nombre) {
 		this.nombre = nombre;
 		this.subtareas = new ArrayList<>();
 	}
 
-	public String getNombre() {
-		return nombre;
+	public void agregarSubtarea(Tarea tarea) {
+		subtareas.add(tarea);
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void mostrarTareas() {
+		mostrarTareas(0);
 	}
 
-	public List<Tarea> getSubtareas() {
-		return subtareas;
-	}
-
-	public void addSubtareas(Tarea tarea) {
-		this.subtareas.add(tarea);
-	}
-
-	@Override
-	public String toString() {
-		return "Tarea{" +
-				"nombre='" + nombre + '\'' +
-				", subtareas=" + subtareas +
-				'}';
+	private void mostrarTareas(int nivel) {
+		System.out.println("|--".repeat(nivel) + nombre);
+		for (Tarea subtarea : subtareas) {
+			subtarea.mostrarTareas(nivel + 1);
+		}
 	}
 }
-

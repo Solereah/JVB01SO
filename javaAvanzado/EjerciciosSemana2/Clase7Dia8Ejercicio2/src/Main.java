@@ -1,43 +1,35 @@
 import logica.Tarea;
 
-import java.util.Scanner;
 public class Main {
+
 	public static void main(String[] args) {
-		System.out.println("Por favor, agregue un nombre a su proyecto: ");
-		Scanner teclado = new Scanner(System.in);
 
-		String nombProyect = teclado.next();
-		Tarea proyecto = new Tarea(nombProyect);
-		addTarea(proyecto, teclado);
 
-		System.out.println("Proyecto: "+proyecto.getNombre());
-		mostrarLista(proyecto, 0);
+		Tarea proyecto = new Tarea("Desarrollo de Software");
+				agregarTareas(proyecto, 0, 2);
+				proyecto.mostrarTareas();
+				}
 
-	}
+				public static void agregarTareas(Tarea tarea, int nivel, int maxNivel) {
+				if (nivel > maxNivel) {
+					return;
+				}
 
-	public static void addTarea(Tarea tarea, Scanner teclado) {
-		System.out.println("Ingrese una nueva tarea: ");
-		String respuesta = teclado.next();
+				int numSubtareas = 2;
 
-		while(!respuesta.equalsIgnoreCase("n")){
-			Tarea subtarea = new Tarea(respuesta);
-			tarea.addSubtareas(subtarea);
-
-			System.out.println("Ingrese una subtarea o presione 'n' salir:");
-			 respuesta = teclado.next();
-		}
-
-	}
-
-	public static void mostrarLista(Tarea tarea, int nivel) {
-		for (int i = 0; i < nivel; i++) {
-			System.out.print("  ");
-		}
-		System.out.println("|-- " + tarea.getNombre());
-
-		for (Tarea subtarea : tarea.getSubtareas()) {
-			mostrarLista(subtarea, nivel + 1);
-		}
+				for (int i = 1; i <= numSubtareas; i++) {
+					String nombreTarea = "Tarea " + nivel + "." + i;
+					Tarea nuevaTarea = new Tarea(nombreTarea);
+					tarea.agregarSubtarea(nuevaTarea);
+					agregarTareas(nuevaTarea, nivel + 1, maxNivel);
+				}
 	}
 }
+
+
+
+
+
+
+
 
