@@ -1,0 +1,13 @@
+com\hackaboss\ejerciciointegradorjpa\JakartaRestConfiguration.class
+com\hackaboss\ejerciciointegradorjpa\persistencia\exceptions\IllegalOrphanException.class
+com\hackaboss\ejerciciointegradorjpa\persistencia\ControladoraPersistencia.class
+com\hackaboss\ejerciciointegradorjpa\logica\Equipo.class
+com\hackaboss\ejerciciointegradorjpa\persistencia\EquipoJpaController.class
+com\hackaboss\ejerciciointegradorjpa\logica\Partido.class
+com\hackaboss\ejerciciointegradorjpa\servlets\SvPartido.class
+com\hackaboss\ejerciciointegradorjpa\logica\Controladora.class
+com\hackaboss\ejerciciointegradorjpa\resources\JakartaEE8Resource.class
+com\hackaboss\ejerciciointegradorjpa\servlets\SvEquipo.class
+com\hackaboss\ejerciciointegradorjpa\persistencia\exceptions\NonexistentEntityException.class
+com\hackaboss\ejerciciointegradorjpa\persistencia\PartidoJpaController.class
+com\hackaboss\ejerciciointegradorjpa\persistencia\exceptions\PreexistingEntityException.class

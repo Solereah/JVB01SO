@@ -1,0 +1,4 @@
+com\hackaboss\votacion\servlets\SvVotacion.class
+com\hackaboss\votacion\logica\Partido.class
+com\hackaboss\votacion\JakartaRestConfiguration.class
+com\hackaboss\votacion\resources\JakartaEE8Resource.class
